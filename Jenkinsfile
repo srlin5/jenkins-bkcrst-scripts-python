@@ -1,14 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
+    stage('backup') {
       steps {
-        sh 'python3 --version'
+        sh 'python3.8 bckrst.py backup'
       }
     }
-    stage('hello') {
+    stage('restore') {
       steps {
-        sh 'python3 hello.py'
+        sh 'python3.8 bckrst.py restore'
       }
     }
   }
