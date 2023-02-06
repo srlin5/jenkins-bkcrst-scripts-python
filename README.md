@@ -6,9 +6,9 @@ Set up a Jenkins job for the python script. To do this, go to the Jenkins dashbo
 
 In the "Build" section, add a new build step and select "Execute shell" as the type. In the command section, write the following command to run the python script on the remote server:
 
-"python3.8 /path/to/python_script.py backup" to backup 
+"python3.8 [Jenkins_job_workspace]/python_script.py backup" to backup 
 
-"python3.8 /path/to/python_script.py restore" to restore
+"python3.8 [Jenkins_job_workspace]//python_script.py restore" to restore
 
 Replace "username" with the username on the remote server and "remote_server" with the IP address or hostname of the remote server. Also, replace "/path/to/python_script.py" with the actual path to the python script.
 
